@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block title %}
+    толстый кот
+{% endblock title %}
+{% block content %}
+
+
+
+<div class="content">
+    <div class="catalog_position">
+        <div class="kategoris">
+            <div class="ketegoriya">
+                <div class="name_category">
+                    <p>Срок доставки/наличие</p>
+                    <img src="{% static 'img/strelkaDown.png' %}" alt="" class="strelkaDown">
+                </div>
+                <div class="category_block">
+                    <div class="textAndInput">
+                        <input class="check oneDay" type="checkbox">
+                        <p class="category_various">
+                            До одного дня/склад-магазин
+                        </p>
+                    </div>
+                    <div class="textAndInput">
+                        <input class="check fiveDay" type="checkbox">
+                        <p class="category_various">
+                            до 5-ти дней/оптовый склад
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <div class="ketegoriya">
+                    <div class="name_category">
+                        <p>ЦЕНА</p>
+                        <img src="{% static 'img/strelkaDown.png' %}" alt="" class="strelkaDown">
+                    </div>
+                    <div class="category_block">
+                        <div class="textAndInput">
+                            <p class="category_various">от</p>
+                            <input class="blockInPrice" type="text">
+                            <p class="category_various">до</p>
+                            <input class="blockInPrice" type="text">
+                            <p></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="ketegoriya">
+                <div class="name_category">
+                    <p>РАЗМЕР</p>
+                    <img src="{% static 'img/strelkaDown.png' %}" alt="" class="strelkaDown">
+                </div>
+                <div class="category_block">
+                    <button class="size_button">
+                        <p class="button_text">36</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cards_block">
+            {% for card in shoes %}
+            <div class="mycard">
+                <img src="{{ card.img.url }}" class="card_img" alt="">
+                <div class="card_text">
+                    <p class="card_name">{{card.name}}</p>
+                    <p class="card_price">{{card.price}} руб</p>
+                </div>
+            </div>
+
+            <div class="mycard_container">
+                <div class="mycard_block">
+                    <img src="{{ card.img.url }}" class="incard_img" alt="">
+                    <div class="mycard_block_text">
+                        <p class="card_name">{{card.name}}</p>
+                        <p class="card_kod"><span class="incard_text_span">Код товара:</span> {{card.id}}</p>
+                        <p class="card_price">{{card.price}} руб</p>
+                        <p class="incard_text"> <span class="incard_text_span">Сезон: </span>{{card.season}}</p>
+                        <p class="incard_text"><span class="incard_text_span">Материал подкладки:</span> {{card.linigMaterial}}</p>
+                        <p class="incard_text"><span class="incard_text_span">Материал верха:</span> {{card.upperMaterial}}</p>
+                        <p class="incard_text"><span class="incard_text_span">Цвет:</span> {{card.color}}</p>
+                        <div class="dopinfo"><a href="#" class="dopinfo_a">Подробнее</a></div>
+                    </div>
+                    <div class="krest_block"><img src="{% static 'img/krest.png' %}" width='40px'alt="" class="krest"></div>
+                        
+                    
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
