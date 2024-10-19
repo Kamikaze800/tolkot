@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.child {
+  display: inline-block;
+  scroll-snap-align: start;
+  width: 1000px;
+  height: 100px;
+}

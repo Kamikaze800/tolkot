@@ -1,0 +1,607 @@
+:root {
+    --black: #2B2929;
+    --dark: #464646;
+    --graydark: #716969;
+    --gray: #BABABA;
+    --gray_white: #E1E1E1;
+    --gray_white_white: #EFEFEF;
+    --gray_very_very_white: #F8F8F8;
+    --white: #FFFFFF;
+    --red: #FF4F4F;
+    --yellow_dark: #F1BF5D;
+    --yellow: #FFF0BA;
+    --grad_1: #6E2F9E - 8E9AE1 - DD61AF - EEF2A8;
+    --grad_2: EFEFEF - CB9A63 - D76598 - 46527F - 1E9190 - 4A5976 - 5F3F6B;
+    --card_size: 393px;
+  }
+
+*{
+    font-family: Inter;
+    color: black;
+}
+.wrap_container{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
+    max-width: 1920px;
+    
+}
+.main_section{
+    position: relative;
+    margin-top: 160px;
+    overflow: hidden;
+}
+.header__menu__list{
+    display: flex;
+    justify-content: space-between;
+
+}
+.menu__item{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.menu_nav{
+    width: 985px;
+}
+.header__accessories{
+
+    width: 488px;
+}
+.header__num_and_email__text{
+    display: flex;
+    align-items: center;
+}
+.header__num_and_email__vector{
+    display: none;
+}
+.strelka_down{
+    width: 20px;
+}
+.header__vector{
+    width: 32px;
+}
+.header__clothes_and_clause{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.header__clothes__list{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 866px;
+}
+.header__clause{
+    display: flex;
+}
+.clause__item{
+    width: 32px
+}
+
+/* слайдер */
+.slider-container {
+    
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 32px;
+  } 
+.slider {
+    
+    transition: transform 0.5s linear;
+    
+}
+.slider__item{
+    height: 700px;
+    
+    flex: 1;
+    border-radius: 12px;
+    background: radial-gradient(1004.02% 191.69% at 102% -3%,rgb(110, 47, 158),rgb(142, 154, 225) 24.479%,rgb(221, 97, 175) 56.771%,rgb(238, 242, 168) 74.479%)/* Предупреждение: градиент использует вращение, не поддерживаемое CSS, и может работать не так, как ожидается. */;
+}
+.slider__item__text{
+    display: inline-block;
+    position: absolute;
+    max-width: 801px;
+    margin-top: 182px;
+    margin-left: 82px;
+}
+.slider__item__title{
+    display: inline-block;
+    color: var(--white);
+    font-size: 48px;
+    font-weight: 700;
+}
+.slider__item__description{
+    margin-top: 24px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+}
+.slider__item__button{
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 12px;
+    padding: 16px 80px;
+    background: white;
+}
+
+.slider__item__img{
+    width: 647px;
+    margin-left: auto;
+}
+.slider__item__brand{
+    position: absolute;
+    right: 0;
+    top: 37px;
+}
+
+.prev-button,
+.next-button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+.prev-button {
+    
+}
+.next-button {
+    transform: rotate(180deg)
+}
+.slider-container__items{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    align-items:center;
+}
+.slider-container__indexes{
+    display: flex;
+}
+.slider-container__index{
+    margin-right: 12px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    border: 2px solid rgb(255, 255, 255);
+    
+}
+.slider-container__index:last-child{
+    margin-right: 0;
+}
+.slider-container__index_active{
+    background: rgb(255, 255, 255);
+}
+/* конгец слайдера */
+
+
+.section__title{
+    margin-bottom: 32px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 130%;
+}
+.brands{
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-around;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.brands__item{
+    height: 60px;
+}
+.brands__item__img{
+    /* width: 100%; */
+    height: 100%;
+}
+.popular_products{
+    display: flex;
+}
+.item__top{
+    width: var(--card_size);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+
+.best_cost{
+    font-weight: 500; 
+    border-radius: 8px;
+    background: rgb(94, 210, 112);
+    color: white;
+    padding: 5px 12px;
+}
+
+.item__icons{
+    
+    display: flex;
+    
+    
+}
+.item__icon{
+    width: 32px;
+    margin-left: 10px;
+}
+.sales{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 425px));
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    grid-template-areas:
+    "sales__cros sales__cros sales__pants sales__tshirt"
+    "sales__delivery sales__delivery sales__hoodies sales__hoodies"
+}
+
+.sales__cros{
+    grid-area: sales__cros;
+    background: #EFEFEF;
+    /* width: 850px; */
+    height: 448px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.sales__cros__img{
+    width: 804px;
+    transform: translateX(100px);
+    
+    /* EFEFEF */
+}
+.sales__cros__title{
+    color: #000;
+    position: absolute;
+}
+.popular__arrows{
+    position: absolute;
+    right: 0;
+    filter: invert(1);
+}
+.next_arrow{
+    transform: rotate(180deg);
+}
+.sales__cros__cost{
+    position: absolute;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background: white;
+    
+}
+.sales__delivery{
+    grid-area: sales__delivery;
+    /* max-width: 850px; */
+    height: 320px;
+    background: var(--yellow);
+    border-radius: 12px;
+}
+.sales__pants{
+    grid-area: sales__pants;
+    /* max-width: 415px; */
+    height: 320px;
+    border-radius: 12px;
+    background: var(--gray_white_white);
+}
+.sales__tshirt{
+    grid-area: sales__tshirt;
+    /* max-width: 415px; */
+    height: 320px;
+    border-radius: 12px;
+    background: var(--gray_white_white);
+}
+.sales__hoodies{
+    margin-top: -120px ;
+    grid-area: sales__hoodies;
+    /* max-width: 850px; */
+    height: 448px;
+    border-radius: 12px;
+    background: var(--gray_white_white);
+}
+
+/* НАЧАЛО БУРГЕРА  */
+
+.burger-menu{
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+.burger-menu_button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 30;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_button:hover .burger-menu_lines {
+  filter: brightness(0.7);
+}
+
+.burger-menu_button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #BB1E99;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.burger-menu_lines::before {
+  content: '';
+  top: -12px;
+}
+.burger-menu_lines::after {
+  content: '';
+  top: 12px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+  background-color: transparent;
+}
+.burger-menu_active .burger-menu_lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu_lines::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    width: 100%;
+  padding-top: 120px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background-color: #F9AFE9;
+  overflow-y: auto;
+  right: -100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+  right: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.burger-menu_link {
+  padding: 18px 35px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #BB1E99;
+  border-bottom: 1px solid #fff;
+}
+.burger-menu_link:first-child {
+  border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+  filter: brightness(0.9);
+}
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popular_products .products__item:last-child{
+    margin-right: 0;
+}
+.bud_text{
+    display: none;
+}
+
+/* КОНЕЦ БУРГЕРА */
+
+@media (max-width: 1440px) {
+    :root {
+        --card_size: 393px;
+    }
+    .wrap_container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header__num_and_email__text{
+        display: none;
+    }
+    .header__num_and_email__vector{
+        display: block;
+    }
+    .header__accessories{
+        justify-content: flex-end;
+    }
+
+}
+
+@media(max-width: 1280px) {
+
+    .wrap_container{
+        margin-top: 90px;
+    }
+    .main_section{
+        margin-top: 140px;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .header__menu__list{
+        display: none;
+    }
+    .header__clothes_and_clause{
+        display: none;
+    }
+    .sales{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+        "sales__cros sales__pants"
+        "sales__hoodies sales__tshirt"
+        "sales__delivery sales__delivery"
+    }
+    .sales__hoodies{
+        margin-top: 0;
+    }
+    .sales__cros{
+        height: auto;
+    }
+    .sales__hoodies{
+        height: auto;
+    }
+    .slider__item{
+        height: 560px;
+    }
+    .slider__item__img{
+        width: 503px;
+        
+    }
+    .slider__item__text{
+        max-width: 558px;
+        margin-top: 116px;
+        margin-left: 48px;
+    }
+    .slider__item__title{
+        font-size: 36px;
+    }
+    .slider__item__description{
+        font-size: 20px;
+    }
+    .slider__item__button{
+        font-size: 18px;
+    }
+    .section__title{
+       font-size: 32px; 
+    }
+    .slider-container__index{
+        width: 12px;
+        height: 12px;
+    }
+} 
+@media(max-width: 1024px) {
+    :root{
+        --card_size: 164px;
+    }
+    .item__bug{
+        display: none;
+    }
+    .best_cost {
+        padding: 5px 12px;
+        font-size: 10px;
+    }
+    .item__heart{
+        width: 24px;
+        height: 24px;
+    }
+    .bud_text{
+        width: 96px;
+        display: block;
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 8px 16px 8px 16px;
+        border-radius: 8px;
+        background: var(--dark);
+    }
+    .slider__item{
+        height: 422px;
+    }
+    .slider__item__text{
+       margin: 0;
+       padding: 24px;
+    }
+    .slider__item__title{
+        font-size: 24px;
+    }
+    .slider__item__description{
+        font-size: 15px;
+        max-width: 280px;
+        width: 100%;
+    }
+    .slider__item__button{
+        font-size: 15px;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+        height: 42px;
+    }
+    .slider__item__brand{
+        display: none;
+        
+    }
+    .slider__item__img{
+        display: none;
+    }
+    
+
+    
+}
+@media (max-width: 768px) {
+    .brands__item {
+        margin-right: 30px;
+    }
+}
+@media (max-width: 440px) {
+    .sales {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "sales__cros"
+        "sales__pants"
+        "sales__hoodies"
+        "sales__tshirt";
+    }
+    .sales__item{
+        height: 170px;
+    }
+    .section__title{
+        font-size: 24px; 
+    }
+    .main_section{
+        margin-top: 80px;
+    }
+}

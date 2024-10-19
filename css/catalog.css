@@ -1,0 +1,29 @@
+.products{
+    margin-top: 80px;
+}
+.products__clues{
+    display: flex;
+    font-size: 16px;
+}
+.products__item{
+    width: var(--card_size);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.products__clues__item{
+    display: flex;
+    margin-right: 40px;
+}
+.products__clues__item__img{
+    align-self: center;
+    width: 15px;
+    height: 15px;
+}
+.products__item__img{
+    width: var(--card_size);
+}
+.products__list{
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
