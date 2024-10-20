@@ -47,14 +47,6 @@ function updateSlider() {
 updateSlider();
 
 
-// catalog
-let products__clues__item = document.querySelector("products__clues__item");
-products__clues__item.addEventListener('click', products__clues__item_func);
-function products__clues__item_func() {
-  products__clues__item.classList.toggle()  
-}
-
-
 // БУУУУУУУУУРГЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕР
 function burgerMenu(selector) {
   let menu = document.querySelector(selector);
@@ -85,6 +77,17 @@ links.forEach(link => {
 }
 
 burgerMenu('.burger-menu');
+
+// catalog
+let products__clues__item = document.querySelector(".products__clues__item");
+products__clues__item.addEventListener('click', function(event){
+  alert( 'Спасибо!' );
+  console.log("тыкнул")
+  products__clues__item.classList.toggle("active")  
+});
+
+// let option__list = document.querySelector(".option__list")
+
 
 // новый тач слайдер
 // let slider = document.querySelector('.slider'),

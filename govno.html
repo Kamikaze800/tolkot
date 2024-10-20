@@ -3,11 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css"> -->
   <title>Document</title>
 </head>
 <body>
-  <p>kakashka</p>
+  <form name="myForm">
+    <select name="languages" multiple>
+        <option value="JS">JavaScript</option>
+        <option value="Java">Java</option>
+        <option value="CS">C#</option>
+        <option value="CPP">C++</option>
+    </select>
+</form>
+<div id="selection"></div>
+<script>
+const languages = document.myForm.languages;
+const selection = document.getElementById("selection");
+ 
+function changeOption(){
+    // удаляем ранее выбранные элементы
+    if (selection.has) { 
+        selection.removeChild(selection.firstChild);  
+    }
+    // получаем выбранные элементы 
+    const options = languages.selectedOptions;
+    for (let i = 0; i < options.length; i++) {      // for each option ...    
+        const option = options[i].text    // получаем выбранный элемент 
+        const div = document.createElement("div");  // для каждого выбранного элемента создаем div
+        const optionText = document.createTextNode(option); // создаем текстовый узел для выбранного элемента  
+        div.appendChild(optionText);    // добавляем  optionText в div   
+        selection.appendChild(div)      // добавляем div в контейнер
+    }
+}
+languages.addEventListener("change", changeOption);
+</script>
 </body>
 </html>

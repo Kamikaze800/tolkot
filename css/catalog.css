@@ -27,3 +27,6 @@
     display: flex;
     flex-wrap: wrap;
 }
+.options__list{
+    display: none;
+}
